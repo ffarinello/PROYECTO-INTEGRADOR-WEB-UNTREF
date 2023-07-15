@@ -1,0 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Belanosima&family=Poppins&display=swap');
+
+:root{
+    --color-principal:var(#FC7300);
+    --color-secundario:var(#1F8A70);
+    --color-terciario:var(#00425A);
+    --color-texto:var(#181823);
+    --color-background:var(#EFF5F5);
+}
+
+/* Diseño Responsive */
+
+@media (min-width: 768px) /*desde este valor hasta abajo*/
+{/*Laptop*/}
+
+@media (min-width: 320px) /*desde este valor hasta abajo*/
+{/*Tablets*/}
+
