@@ -7,27 +7,62 @@
     --color-texto: #181823;
     --color-background: #EFF5F5;
 }
+
+*{
+    margin: 0;
+}
+
 /* header */
-header{
+
+header, footer{
     background-color: var(--color-secundario);
     color: var(--color-background);
     display: grid;
+    grid-template-columns: repeat(3, 1fr) ;
 }
 
-.logo{
-    font-family: "Belanosima", sans-serif;
-    font-size: 2.5rem;
-    color: var(--color-texto);
-    position: relative;
+.header__logo{
+    margin: 20px;
+    grid-column: 1;
 }
 
-.titulo--untref{
+.header__logo>h1{
+    display: relative;
+    margin-top: -84px;
+    margin-left: 85px;
+}
+
+header .header__logo span:first-child,
+footer .footer__logo span:first-child {
     font-family: "Poppins", sans-serif;
+    color: var(--color-texto);
+    text-shadow: var(--color-background) 2px 2px;
+    font-size: 2.5rem;
+    letter-spacing: 3px;
 }
 
-nav{
-    color: var(--color-background);
-    
+header .header__logo span:last-child,
+footer .footer__logo span:last-child {
+    text-shadow: var(--color-texto) 3px 3px;
+    font-size: 2.5rem;
+    font-weight: 500;
+    font-style: italic;
+    margin-left: 50px;
+}
+
+.navbar{
+    grid-column: 3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+nav div img{
+    width: 35px;
+}
+
+nav div img:hover{
+    filter: invert(80%);
 }
 
 a{
@@ -39,7 +74,7 @@ a:hover{
     color: var(--color-terciario);
 }
 
-
+/*  main section */
 
 /* Diseño Responsive */
 
