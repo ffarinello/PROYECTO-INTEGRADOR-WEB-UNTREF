@@ -20,19 +20,23 @@ footer {
     color: var(--color-background);
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: auto 1fr auto;
+    align-items: center;
 }
 
 .header__logo {
     margin: 25px;
-    grid-row: 1;
     grid-column: 1;
 }
 
-.header__logo > h1 {
+.header__logo > img {
+    border-radius: 20%;
+}
+
+h1 {
     display: relative;
-    margin-top: -84px;
-    margin-left: 85px;
+    margin-top: -71px;
+    margin-left: 90px;
+    line-height: 35px;
 }
 
 header .header__logo span:first-child,
@@ -57,9 +61,7 @@ footer .footer__logo span:last-child {
 /* navbar */
 
 .navbar {
-    grid-row: 2;
     grid-column: 3;
-    /* FALTA ALINEAR*/
 }
 
 a {
@@ -91,16 +93,13 @@ footer {
 }
 
 .redes {
-    grid-row: 1;
     display: flex;
     flex-direction: row;
 }
 .footer__ubicacion {
     align-items: center;
-    grid-row: 2;
 }
 .contacto {
-    grid-row: 3;
 }
 
 /* Diseño Responsive */
