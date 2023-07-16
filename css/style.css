@@ -1,32 +1,35 @@
-@import url('https://fonts.googleapis.com/css2?family=Belanosima&family=Poppins&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Belanosima&family=Poppins&display=swap");
 
-:root{
-    --color-principal: #FC7300;
-    --color-secundario: #1F8A70;
-    --color-terciario: #00425A;
+:root {
+    --color-principal: #fc7300;
+    --color-secundario: #1f8a70;
+    --color-terciario: #00425a;
     --color-texto: #181823;
-    --color-background: #EFF5F5;
+    --color-background: #eff5f5;
 }
 
-*{
+* {
     margin: 0;
 }
 
 /* header */
 
-header, footer{
+header,
+footer {
     background-color: var(--color-secundario);
     color: var(--color-background);
     display: grid;
-    grid-template-columns: repeat(3, 1fr) ;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto 1fr auto;
 }
 
-.header__logo{
-    margin: 20px;
+.header__logo {
+    margin: 25px;
+    grid-row: 1;
     grid-column: 1;
 }
 
-.header__logo>h1{
+.header__logo > h1 {
     display: relative;
     margin-top: -84px;
     margin-left: 85px;
@@ -43,6 +46,7 @@ footer .footer__logo span:first-child {
 
 header .header__logo span:last-child,
 footer .footer__logo span:last-child {
+    position: relative;
     text-shadow: var(--color-texto) 3px 3px;
     font-size: 2.5rem;
     font-weight: 500;
@@ -50,41 +54,61 @@ footer .footer__logo span:last-child {
     margin-left: 50px;
 }
 
-.navbar{
+/* navbar */
+
+.navbar {
+    grid-row: 2;
     grid-column: 3;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    /* FALTA ALINEAR*/
 }
 
-nav div img{
-    width: 35px;
-}
-
-nav div img:hover{
-    filter: invert(80%);
-}
-
-a{
+a {
     color: inherit;
     text-decoration: none;
 }
 
-a:hover{
+a:hover {
     color: var(--color-terciario);
+}
+
+a > img {
+    width: 50px;
+}
+
+nav div img:hover {
+    filter: invert(80%);
 }
 
 /*  main section */
 
-main{
-    background-color: var(--color-background) ;
+main {
+    background-color: var(--color-background);
+}
+
+/* footer */
+
+footer {
+}
+
+.redes {
+    grid-row: 1;
+    display: flex;
+    flex-direction: row;
+}
+.footer__ubicacion {
+    align-items: center;
+    grid-row: 2;
+}
+.contacto {
+    grid-row: 3;
 }
 
 /* Diseño Responsive */
 
-@media (min-width: 768px) /*desde este valor hasta abajo*/
-{/*Laptop*/}
+@media (min-width: 768px) /*desde este valor hasta abajo*/ {
+    /*Laptop*/
+}
 
-@media (min-width: 320px) /*desde este valor hasta abajo*/
-{/*Tablets*/}
-
+@media (min-width: 320px) /*desde este valor hasta abajo*/ {
+    /*Tablets*/
+}
