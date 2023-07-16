@@ -76,6 +76,10 @@ a:hover{
 
 /*  main section */
 
+main{
+    background-color: var(--color-background) ;
+}
+
 /* Diseño Responsive */
 
 @media (min-width: 768px) /*desde este valor hasta abajo*/
