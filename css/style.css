@@ -13,26 +13,25 @@
 }
 
 /* header */
+header {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    place-items: center;
+    width: 100%;
+    height: 200px;
+}
 
 header,
 footer {
     background-color: var(--color-secundario);
     color: var(--color-background);
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    align-items: center;
 }
 
-.header__logo {
-    margin: 25px;
-    grid-column: 1;
+.header__logo img {
+    border-radius: 10%;
 }
 
-.header__logo > img {
-    border-radius: 20%;
-}
-
-h1 {
+header h1 {
     display: relative;
     margin-top: -71px;
     margin-left: 90px;
@@ -40,7 +39,7 @@ h1 {
 }
 
 header .header__logo span:first-child,
-footer .footer__logo span:first-child {
+footer .footer__ubicacion-logo span:first-child {
     font-family: "Poppins", sans-serif;
     color: var(--color-texto);
     text-shadow: var(--color-background) 2px 2px;
@@ -48,14 +47,18 @@ footer .footer__logo span:first-child {
     letter-spacing: 3px;
 }
 
+header .header__logo span:last-child {
+    margin-left: 50px !important;
+}
+
 header .header__logo span:last-child,
-footer .footer__logo span:last-child {
+footer .footer__ubicacion-logo span:last-child {
     position: relative;
     text-shadow: var(--color-texto) 3px 3px;
     font-size: 2.5rem;
     font-weight: 500;
     font-style: italic;
-    margin-left: 50px;
+    margin-left: 10px;
 }
 
 /* navbar */
@@ -89,17 +92,18 @@ main {
 
 /* footer */
 
-footer {
+footer section,
+footer section div {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
 }
 
-.redes {
+section .footer__redes {
     display: flex;
-    flex-direction: row;
-}
-.footer__ubicacion {
+    justify-content: space-evenly;
     align-items: center;
-}
-.contacto {
+    gap: 100px;
 }
 
 /* Diseño Responsive */
