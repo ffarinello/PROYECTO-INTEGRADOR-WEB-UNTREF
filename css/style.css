@@ -80,7 +80,8 @@ a > img {
     width: 50px;
 }
 
-nav div img:hover {
+nav div img:hover,  /* header */
+.footer__redes a:hover /* footer */ {
     filter: invert(80%);
 }
 
@@ -91,19 +92,30 @@ main {
 }
 
 /* footer */
-
-footer section,
-footer section div {
+.footer__ubicacion {
     display: flex;
-    flex-flow: row wrap;
-    justify-content: space-evenly;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
-section .footer__redes {
+.footer__ubicacion-mapa iframe {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.footer__ubicacion-logo,
+.footer__ubicacion-mapa figcaption {
+    padding: 15px;
+}
+
+.footer__redes {
     display: flex;
-    justify-content: space-evenly;
+    height: 100vw;
+    height: 100px;
+    place-content: space-evenly;
     align-items: center;
-    gap: 100px;
 }
 
 /* Diseño Responsive */
