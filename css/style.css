@@ -12,13 +12,21 @@
     margin: 0;
 }
 
+h2 {
+    font-family: "Belanosima", sans-serif;
+    letter-spacing: 2px;
+}
+
+p {
+    font-family: "Poppins", sans-serif;
+}
 /* header */
 header {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     place-items: center;
-    width: 100%;
-    height: 200px;
+    width: 100vw;
+    height: 250px;
 }
 
 header,
@@ -32,7 +40,7 @@ footer {
 }
 
 header h1 {
-    display: relative;
+    position: relative;
     margin-top: -71px;
     margin-left: 90px;
     line-height: 35px;
@@ -88,10 +96,34 @@ nav div img:hover,  /* header */
 /*  main section */
 
 main {
-    background-color: var(--color-background);
+    background-image: url(/img/pizarron.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    display: grid;
+    justify-content: center;
+}
+
+.card {
+    width: 90vw;
+    background-color: white;
+    color: var(--color-terciario);
+    border-radius: 4px;
+    margin: 10px;
+}
+
+article section > h2,
+article section > p {
+    padding: 15px;
+}
+
+.subtitulo {
+    font-weight: 600;
+    font-style: italic;
+    font-size: 1.2rem;
 }
 
 /* footer */
+
 .footer__ubicacion {
     display: flex;
     flex-direction: column;
