@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <script
+            src="https://kit.fontawesome.com/8f94c28a6e.js"
+            crossorigin="anonymous"
+        ></script>
+        <link
+            rel="stylesheet"
+            href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css"
+        />
+        <link rel="stylesheet" href="./css/contact-style.css" />
+
+        <title>Contacto</title>
+    </head>
+    <body>
+        <section id="contact">
+            <h1 class="section-header">Contacto</h1>
+
+            <div class="contact-wrapper">
+                <!-- Left contact page -->
+
+                <form id="contact-form" class="form-horizontal" role="form">
+                    <div class="form-group">
+                        <div class="col-sm-12">
+                            <input
+                                type="text"
+                                class="form-control"
+                                id="nombre"
+                                placeholder="NOMBRE"
+                                name="nombre"
+                                value=""
+                                required
+                            />
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <div class="col-sm-12">
+                            <input
+                                type="email"
+                                class="form-control"
+                                id="email"
+                                placeholder="EMAIL"
+                                name="email"
+                                value=""
+                                required
+                            />
+                        </div>
+                    </div>
+
+                    <textarea
+                        class="form-control"
+                        rows="10"
+                        placeholder="MENSAJE"
+                        name="MENSAJE"
+                        required
+                    ></textarea>
+
+                    <button
+                        class="btn btn-primary send-button"
+                        id="submit"
+                        type="submit"
+                        value="SEND"
+                    >
+                        <div class="alt-send-button">
+                            <i class="fa fa-paper-plane"></i
+                            ><span class="send-text">ENVIAR</span>
+                        </div>
+                    </button>
+                </form>
+
+                <!-- Left contact page -->
+
+                <div class="direct-contact-container">
+                    <ul class="contact-list">
+                        <li class="list-item">
+                            <i class="fa fa-phone fa-2x"
+                                ><span class="contact-text phone"
+                                    ><a href="tel:11-5555-2368" title="Llámenos"
+                                        >(11) 5555-2368</a
+                                    ></span
+                                ></i
+                            >
+                        </li>
+
+                        <li class="list-item">
+                            <i class="fa fa-envelope fa-2x"
+                                ><span class="contact-text gmail"
+                                    ><a
+                                        href="mailto:#"
+                                        title="Envíanos un email"
+                                        >educacionprimaria@untref.com.ar</a
+                                    ></span
+                                ></i
+                            >
+                        </li>
+                        <li class="list-item">
+                            <i class="fa fa-map-marker fa-2x">
+                                <span class="contact-text place">
+                                    Caseros, Buenos Aires
+                                </span>
+                            </i>
+                        </li>
+                        <li class="list-item">
+                            <iframe
+                                src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d13135.861366641207!2d-58.5643367!3d-34.6050379!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bccacb9f8ff113%3A0x22fd08da6711928d!2sUniversidad%20Nacional%20de%20Tres%20de%20Febrero%20-%20Sede%20Caseros%20I!5e0!3m2!1ses!2sar!4v1689560559273!5m2!1ses!2sar"
+                                width="300"
+                                height="150"
+                                style="border: 0"
+                                allowfullscreen=""
+                                loading="lazy"
+                                referrerpolicy="no-referrer-when-downgrade"
+                            ></iframe>
+                        </li>
+                    </ul>
+
+                    <hr />
+                    <ul class="social-media-list">
+                        <li>
+                            <a href="#" target="_blank" class="contact-icon">
+                                <i class="fa fa-facebook" aria-hidden="true"></i
+                            ></a>
+                        </li>
+                        <li>
+                            <a href="#" target="_blank" class="contact-icon">
+                                <i
+                                    class="fa fa-instagram"
+                                    aria-hidden="true"
+                                ></i
+                            ></a>
+                        </li>
+                        <li>
+                            <a href="#" target="_blank" class="contact-icon">
+                                <i class="fa fa-at" aria-hidden="true"></i
+                            ></a>
+                        </li>
+                        <li>
+                            <a href="#" target="_blank" class="contact-icon">
+                                <i
+                                    class="fa-brands fa-tiktok"
+                                    aria-hidden="true"
+                                ></i
+                            ></a>
+                        </li>
+                    </ul>
+                    <hr />
+
+                    <div class="copyright">
+                        &copy; Todos los derechos reservados a UNTREF SCHOOL
+                    </div>
+                </div>
+            </div>
+        </section>
+    </body>
+</html>
