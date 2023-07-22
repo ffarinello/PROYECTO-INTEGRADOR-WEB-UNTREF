@@ -1,21 +1,31 @@
 <!DOCTYPE html>
 <html lang="es">
-    <head>
+        <!-- meta-data -->
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta
+            name="description"
+            content="Sitio web de la escuela primaria 'UNTREF School'"
+        />
+        <meta name="author" content="Farinello, Nicolas" />
+
+        <!-- links -->
         <link rel="stylesheet" href="./css/style.css" />
         <link
             rel="icon"
             href="./img/logo/untref-school-logo.jpg"
             type="image/x-icon"
         />
-        <meta
-            name="description"
-            content="Sitio web de la escuela primaria 'UNTREF School'"
-        />
-        <meta name="author" content="Farinello, Nicolas" />
+
+        <!-- icons -->
+        <script
+            src="https://kit.fontawesome.com/8f94c28a6e.js"
+            crossorigin="anonymous"
+        ></script>
+        
         <title>UNTREF School</title>
     </head>
+
     <body>
         <header>
             <div class="header__logo">
@@ -100,7 +110,6 @@
                                 enganchen con el cole. Hacemos que disfruten
                                 mientras crecen.
                             </p>
-                            <hr />
                             <br />
                             <p class="card-text">
                                 ¡Vení a UNTREF SCHOOL y dale a tu pibe el camino
@@ -201,47 +210,50 @@
             </section>
         </main>
         <footer>
-            <section class="footer__ubicacion">
+            <section class="footer-logo">
                 <div class="footer__ubicacion-logo">
                     <h1>
                         <span>UNTREF</span>
                         <span>School</span>
                     </h1>
                 </div>
-                <div class="footer__ubicacion-mapa">
-                    <figure>
-                        <iframe
-                            src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d13135.861366641207!2d-58.5643367!3d-34.6050379!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bccacb9f8ff113%3A0x22fd08da6711928d!2sUniversidad%20Nacional%20de%20Tres%20de%20Febrero%20-%20Sede%20Caseros%20I!5e0!3m2!1ses!2sar!4v1689560559273!5m2!1ses!2sar"
-                            width="350"
-                            height="200"
-                            style="border: 1"
-                            allowfullscreen=""
-                            loading="lazy"
-                            referrerpolicy="no-referrer-when-downgrade"
-                        ></iframe>
-                        <figcaption>
-                            <p>
-                                Valentín Gómez 4828/38, Caseros, Provincia de
-                                Buenos Aires
-                            </p>
-                        </figcaption>
-                    </figure>
-                </div>
             </section>
-            <section class="footer__redes">
-                <a href="/untrefschool"
-                    ><img src="./img/redes/facebook.png" alt="Facebook"
-                /></a>
-                <a href="/untrefschool"
-                    ><img src="./img/redes/instagram.png" alt="Instagram"
-                /></a>
-                <a href="/untrefschool"
-                    ><img src="./img/redes/threads.png" alt="Threads"
-                /></a>
-                <a href="/untrefschool"
-                    ><img src="./img/redes/tiktok.png" alt="TikTok"
-                /></a>
+
+            <section class="header-info">
+                <table>
+                    <tr class="fila_info">
+                        <th class="info-titulo">SERVICIOS:</th>
+                        <td class="info-texto">
+                            <a href="#">Deportes</a> /
+                            <a href="#">Música</a> /
+                            <a href="#">Arte</a> /
+                            <a href="#">Teatro</a>
+                        </td>
+                    </tr>
+                    <tr class="fila_info">
+                        <th class="info-titulo">MODALIDADES:</th>
+                        <td class="info-texto">
+                            <a href="#">Simple jornada</a> /
+                            <a href="#">Doble jornada</a> /
+                            <a href="#">Jornada lingüística inmersiva</a> (
+                            <a href="#">Inglés </a> /
+                            <a href="#"> Italiano</a> )
+                        </td>
+                    </tr>
+                    <tr class="fila_info">
+                        <th class="info-titulo">COMUNICACIÓN:</th>
+                        <td class="info-texto">
+                            <a href="#fb/untref">Facebook</a>  /
+                            <a href="#ig/untref">Instagram</a> /
+                            <a href="tel:55552368">Teléfono</a> /
+                            <a href="https://wa.me/549115552368?text=Hola. Me comunico desde el sitio web para hacer una consulta.">Whatsapp</a>
+                        </td>
+                    </tr>
+                </table>
             </section>
+            <center id="copyright">
+                &copy; Todos los derechos reservados a UNTREF SCHOOL
+            </center>
         </footer>
     </body>
 </html>

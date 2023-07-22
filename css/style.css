@@ -12,6 +12,7 @@
     margin: 0;
 }
 
+h2,
 h4,
 h5 {
     font-family: "Belanosima", sans-serif;
@@ -171,30 +172,29 @@ main {
 
 /* footer */
 
-.footer__ubicacion {
+.footer-logo {
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    justify-content: center;
+    line-height: 100px;
+}
+
+.header-info {
+    display: flex;
     justify-content: center;
 }
 
-.footer__ubicacion-mapa iframe {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
+.fila_info {
+    text-indent: 30px;
+    line-height: 40px;
+    font-size: 1.2rem;
+    border-bottom: 1px dashed white;
 }
 
-.footer__ubicacion-logo,
-.footer__ubicacion-mapa figcaption {
-    padding: 15px;
-}
-
-.footer__redes {
-    display: flex;
-    height: 100vw;
-    height: 100px;
-    place-content: space-evenly;
-    align-items: center;
+#copyright {
+    font: 200 14px "Belanosima", sans-serif;
+    background-color: var(--color-background);
+    color: var(--color-texto);
+    letter-spacing: 1px;
 }
 
 /* Diseño Responsive */
