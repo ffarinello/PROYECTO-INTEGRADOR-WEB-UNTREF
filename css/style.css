@@ -24,11 +24,12 @@ p {
 }
 /* header */
 header {
+    height: 500px;
     display: grid;
-    grid-template-columns: 50% auto;
-    grid-template-rows: auto;
-    place-items: center;
-    height: 300px;
+    grid-template-rows: 25% 70%;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
 }
 
 header,
@@ -39,11 +40,13 @@ footer {
 
 .header__logo img {
     border-radius: 10%;
+    display: flex;
+    align-items: flex-start;
 }
 
 header h1 {
     position: relative;
-    margin-top: -71px;
+    margin-top: -68px;
     margin-left: 90px;
     line-height: 35px;
 }
@@ -57,10 +60,6 @@ footer .footer__ubicacion-logo span:first-child {
     letter-spacing: 3px;
 }
 
-header .header__logo span:last-child {
-    margin-left: 50px !important;
-}
-
 header .header__logo span:last-child,
 footer .footer__ubicacion-logo span:last-child {
     position: relative;
@@ -72,11 +71,22 @@ footer .footer__ubicacion-logo span:last-child {
 }
 
 /* navbar */
-
-.navbar {
-    grid-column: 3/4;
-    font-size: 1.2rem;
+.header__logo {
+    padding: 10px;
+    text-align: center;
 }
+
+.item {
+    font-size: 1.2rem;
+    padding: 10px;
+    text-align: center;
+}
+
+/* .item-contacto {
+    padding: 10px;
+    border: 1px solid #ccc;
+    text-align: center;
+} */
 
 ul {
     list-style: none;
@@ -84,13 +94,11 @@ ul {
 }
 
 .items {
-    box-sizing: border-box;
-    margin: 10px;
-    text-align: left;
     line-height: 35px;
 }
 
 .item-contacto {
+    border: none;
     text-align: center;
     margin-top: 35px;
 }
