@@ -92,7 +92,15 @@ ul {
 
 .item-contacto {
     text-align: center;
-    margin-top: 20px;
+    margin-top: 35px;
+}
+
+.item a:hover,
+.info-texto a:hover {
+    color: var(--color-texto);
+    font-size: 1.3rem;
+    transition: all 0.5s;
+    transform: scale(1.15);
 }
 
 li > a {
@@ -104,11 +112,31 @@ a {
     text-decoration: none;
 }
 
-a:hover {
+.btn {
+    background-color: var(--color-principal);
+    color: white;
+    padding: 15px;
+    border-radius: 30px 5%;
+    margin-top: 15px;
+    margin-bottom: 10px;
+}
+
+/* 
+TO DO: 
+HEADER IMAGE /  MAIN BUTTONS /  TABLE FOOTER   /   MEDIA QUERIES
+*/
+
+/* a:hover {
     background-color: var(--color-terciario);
     text-decoration: overline underline;
     text-underline-offset: 8px;
-}
+} */
+
+/* div a:hover {
+    background-color: var(--color-terciario);
+    text-decoration: overline underline;
+    text-underline-offset: 8px;
+} */
 
 /*  main section */
 
@@ -136,6 +164,7 @@ main {
     outline-color: lightgrey;
     background-clip: padding-box;
 }
+
 #nosotros,
 #motivos,
 #propuesta,
@@ -173,15 +202,6 @@ main {
     align-items: center;
     justify-content: center;
     height: 40px;
-}
-
-.btn {
-    background-color: var(--color-principal);
-    color: white;
-    padding: 15px;
-    border-radius: 30px 5%;
-    margin-top: 10px;
-    margin-bottom: 15px;
 }
 
 /* footer */
