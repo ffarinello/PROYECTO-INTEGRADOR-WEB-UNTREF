@@ -10,6 +10,7 @@
 
 * {
     margin: 0;
+    min-width: auto;
 }
 
 h2,
@@ -23,13 +24,18 @@ p {
     font-family: "Poppins", sans-serif;
 }
 /* header */
+
 header {
-    height: 500px;
     display: grid;
     grid-template-rows: 25% 70%;
-    justify-content: center;
+    height: 600px;
     align-items: center;
+    justify-content: center;
     gap: 10px;
+    background-image: url(/img/backgrounds/pizarron.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
 }
 
 header,
@@ -82,12 +88,6 @@ footer .footer__ubicacion-logo span:last-child {
     text-align: center;
 }
 
-/* .item-contacto {
-    padding: 10px;
-    border: 1px solid #ccc;
-    text-align: center;
-} */
-
 ul {
     list-style: none;
     padding-inline-start: 0;
@@ -103,7 +103,7 @@ ul {
     margin-top: 35px;
 }
 
-.item a:hover,
+.item:hover,
 .info-texto a:hover {
     color: var(--color-texto);
     font-size: 1.3rem;
@@ -130,8 +130,10 @@ a {
 }
 
 /* 
-TO DO: 
-HEADER IMAGE /  MAIN BUTTONS /  TABLE FOOTER   /   MEDIA QUERIES
+    TO DO: 
+        # MAIN BUTTONS 
+        # TABLE FOOTER  
+        # MEDIA QUERIES
 */
 
 /* a:hover {
@@ -149,8 +151,9 @@ HEADER IMAGE /  MAIN BUTTONS /  TABLE FOOTER   /   MEDIA QUERIES
 /*  main section */
 
 main {
-    background-image: url(/img/backgrounds/pizarron.jpg);
+    background-image: url(/img/backgrounds/biblioteca.jpg);
     background-size: cover;
+    background-position: center center;
     background-repeat: no-repeat;
     background-attachment: fixed;
     padding: 40px;
@@ -158,57 +161,49 @@ main {
 
 .cards {
     display: flex;
-    flex-flow: column wrap;
-    gap: 30px;
+    flex-direction: column;
+    gap: 20px;
 }
 
-.card,
-#noticias {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    outline: auto;
+.card {
     background-color: rgb(234, 233, 233);
-    outline-color: lightgrey;
-    background-clip: padding-box;
+    outline: auto;
+    outline-color: lightgray;
 }
 
 #nosotros,
 #motivos,
 #propuesta,
 #noticias {
+    text-align: center;
     padding: 12px;
 }
 
 .card-body {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    background-color: white;
     outline: auto;
     outline-color: lightgray;
-    padding: 20px 30px;
+    background-color: white;
+    padding: 15px;
 }
 
-.card-title {
-    font-size: 1.3rem;
-    padding: 20px 20px 25px;
-    text-decoration: underline;
-    text-underline-offset: 5px;
+.card-subtitle {
+    text-align: left;
+    font-size: 1.1rem;
+    padding: 20px 0px;
 }
 
 .card-text {
-    display: flex;
-    flex-flow: column wrap;
-    font-size: 1.1rem;
-    text-align: center;
+    font-size: 0.9rem;
+    text-align: justify;
 }
 
 .card-footer {
-    color: grey;
     display: flex;
-    align-items: center;
     justify-content: center;
+    align-items: center;
+    color: grey;
     height: 40px;
 }
 
@@ -235,16 +230,28 @@ main {
 #copyright {
     font: 200 14px "Belanosima", sans-serif;
     background-color: var(--color-background);
-    color: var(--color-texto);
+    color: var(--color-terciario);
     letter-spacing: 1px;
 }
 
 /* Diseño Responsive */
 
 @media (min-width: 768px) /*desde este valor hasta abajo*/ {
-    /*Laptop*/
+    .card-title {
+        background-color: green; /*Laptop*/
+    }
 }
 
-@media (min-width: 320px) /*desde este valor hasta abajo*/ {
-    /*Tablets*/
+@media (min-width: 576px) {
+    aside .text-body,
+    aside .card-footer {
+        display: flex;
+        flex-direction: row;
+    }
+}
+
+@media (min-width: 321px) /*desde este valor hasta abajo*/ {
+    .card-body {
+        background-color: blue; /*Laptop*/
+    } /*Tablets*/
 }
