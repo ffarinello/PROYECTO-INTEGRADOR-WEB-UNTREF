@@ -13,6 +13,10 @@
     min-width: auto;
 }
 
+body {
+    width: 100vw;
+}
+
 h2,
 h4,
 h5 {
@@ -161,20 +165,23 @@ main {
 
 .cards {
     display: flex;
-    flex-direction: column;
-    gap: 20px;
+    flex-flow: column wrap;
+    gap: 30px;
 }
 
-.card {
-    background-color: rgb(234, 233, 233);
+.card,
+#noticias {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     outline: auto;
-    outline-color: lightgray;
+    outline-color: lightgrey;
+    background-color: rgb(234, 233, 233);
 }
 
 #nosotros,
 #motivos,
-#propuesta,
-#noticias {
+#propuesta {
     text-align: center;
     padding: 12px;
 }
