@@ -16,7 +16,6 @@
 body {
     width: 100vw;
 }
-
 h2,
 h4,
 h5 {
@@ -30,11 +29,11 @@ p {
 /* header */
 
 header {
-    display: grid;
-    grid-template-rows: 25% 70%;
     height: 600px;
+    display: grid;
+    grid-auto-rows: 150px minmax(200px, auto);
     align-items: center;
-    justify-content: center;
+    justify-items: center;
     gap: 10px;
     background-image: url(/img/backgrounds/pizarron.jpg);
     background-size: cover;
@@ -48,10 +47,14 @@ footer {
     color: var(--color-background);
 }
 
+.header__logo {
+    padding: 10px;
+}
+
 .header__logo img {
     border-radius: 10%;
     display: flex;
-    align-items: flex-start;
+    align-items: center;
 }
 
 header h1 {
@@ -62,7 +65,7 @@ header h1 {
 }
 
 header .header__logo span:first-child,
-footer .footer__ubicacion-logo span:first-child {
+footer .footer-logo span:first-child {
     font-family: "Poppins", sans-serif;
     color: var(--color-texto);
     text-shadow: var(--color-background) 2px 2px;
@@ -71,7 +74,7 @@ footer .footer__ubicacion-logo span:first-child {
 }
 
 header .header__logo span:last-child,
-footer .footer__ubicacion-logo span:last-child {
+footer .footer-logo span:last-child {
     position: relative;
     text-shadow: var(--color-texto) 3px 3px;
     font-size: 2.5rem;
@@ -81,20 +84,11 @@ footer .footer__ubicacion-logo span:last-child {
 }
 
 /* navbar */
-.header__logo {
-    padding: 10px;
-    text-align: center;
-}
 
 .item {
     font-size: 1.2rem;
     padding: 10px;
     text-align: center;
-}
-
-ul {
-    list-style: none;
-    padding-inline-start: 0;
 }
 
 .items {
@@ -104,24 +98,24 @@ ul {
 .item-contacto {
     border: none;
     text-align: center;
-    margin-top: 35px;
+    margin: 25px 0px;
 }
 
-.item:hover,
-.info-texto a:hover {
-    color: var(--color-texto);
-    font-size: 1.3rem;
-    transition: all 0.5s;
-    transform: scale(1.15);
-}
-
-li > a {
-    padding: 5px;
+ul {
+    list-style: none;
+    padding-inline-start: 0;
 }
 
 a {
     color: inherit;
     text-decoration: none;
+}
+
+.item:hover {
+    color: var(--color-secundario);
+    font-size: 1.3rem;
+    transition: all 0.5s;
+    transform: scale(1.1);
 }
 
 .btn {
@@ -135,26 +129,30 @@ a {
 
 /* 
     TO DO: 
-        # MAIN BUTTONS 
-        # TABLE FOOTER  
+        # CARDS BUTTONS 
         # MEDIA QUERIES
 */
 
 /* a:hover {
-    background-color: var(--color-terciario);
-    text-decoration: overline underline;
-    text-underline-offset: 8px;
-} */
-
-/* div a:hover {
-    background-color: var(--color-terciario);
+    background-color: var(--color-secundario);
     text-decoration: overline underline;
     text-underline-offset: 8px;
 } */
 
 /*  main section */
 
+/* PRUEBA RESPONSIVE */
+
+/* FIN - PRUEBA RESPONSIVE */
+
 main {
+    display: grid;
+    grid-template-areas:
+        "contenido"
+        "contenido"
+        "contenido"
+        "lateral";
+
     background-image: url(/img/backgrounds/biblioteca.jpg);
     background-size: cover;
     background-position: center center;
@@ -163,25 +161,46 @@ main {
     padding: 40px;
 }
 
-.cards {
-    display: flex;
-    flex-flow: column wrap;
-    gap: 30px;
+.card-nosotros,
+.card-motivos,
+.card-propuesta {
+    margin-bottom: 30px;
+}
+
+aside.cards .card {
+    margin-bottom: 30px;
+}
+
+.card-nosotros {
+    grid-area: contenido;
+}
+.card-motivos {
+    grid-area: contenido;
+}
+.card-propuesta {
+    grid-area: contenido;
+}
+aside {
+    grid-area: lateral;
+}
+
+aside.cards h2#noticias {
+    grid-area: lateral;
+    margin-bottom: 30px;
+}
+
+aside.cards .card.card-noticias {
+    grid-area: lateral;
 }
 
 .card,
 #noticias {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
     outline: auto;
     outline-color: lightgrey;
     background-color: rgb(234, 233, 233);
 }
 
-#nosotros,
-#motivos,
-#propuesta {
+h2 {
     text-align: center;
     padding: 12px;
 }
@@ -192,7 +211,11 @@ main {
     outline: auto;
     outline-color: lightgray;
     background-color: white;
-    padding: 15px;
+    padding: 20px;
+}
+
+.card-body h5.card-subtitle:first-of-type {
+    padding-top: 0px;
 }
 
 .card-subtitle {
@@ -216,22 +239,40 @@ main {
 
 /* footer */
 
-.footer-logo {
-    display: flex;
+.informacion {
+    display: grid;
+    grid-template-rows: auto auto auto;
     justify-content: center;
-    line-height: 100px;
+    padding-top: 30px;
 }
 
-.header-info {
-    display: flex;
-    justify-content: center;
-}
-
-.fila_info {
-    text-indent: 30px;
-    line-height: 40px;
+.info {
+    width: 250px;
+    display: grid;
+    place-content: center;
+    line-height: 30px;
     font-size: 1.2rem;
-    border-bottom: 1px dashed white;
+}
+
+dt {
+    font-size: 1.25rem;
+    margin: 20px 0px;
+    text-align: center;
+}
+
+dd {
+    line-height: 2.5rem;
+    text-align: center;
+}
+
+dd a:hover {
+    color: var(--color-texto);
+}
+
+.footer-logo {
+    display: grid;
+    place-content: center;
+    line-height: 100px;
 }
 
 #copyright {
@@ -243,22 +284,88 @@ main {
 
 /* Diseño Responsive */
 
-@media (min-width: 768px) /*desde este valor hasta abajo*/ {
-    .card-title {
-        background-color: green; /*Laptop*/
+@media (min-width: 1200px) {
+    main {
+        grid-template-columns: auto 35%;
+        grid-template-areas:
+            "contenido lateral"
+            "contenido lateral"
+            "contenido lateral";
+    }
+
+    .card-nosotros,
+    .card-motivos,
+    .card-propuesta {
+        margin-bottom: 30px;
+        margin-right: 40px;
+    }
+
+    aside.cards .card {
+        margin-bottom: 30px;
+    }
+
+    .card-nosotros {
+        grid-area: contenido;
+    }
+    .card-motivos {
+        grid-area: contenido;
+    }
+    .card-propuesta {
+        grid-area: contenido;
+    }
+    aside {
+        grid-area: lateral;
+    }
+
+    aside.cards h2#noticias {
+        grid-area: lateral;
+        margin-bottom: 30px;
+    }
+
+    aside.cards .card.card-noticias {
+        grid-area: lateral;
     }
 }
 
-@media (min-width: 576px) {
-    aside .text-body,
-    aside .card-footer {
+@media (min-width: 1024px) {
+    /*notebook*/
+    header {
+        grid-template-columns: auto auto;
+        grid-template-rows: auto;
+    }
+
+    /* ORDENAR 
+    -----------------------------
+    ITEMS      LOGO      CONTACTO
+    -----------------------------
+    */
+}
+
+@media (min-width: 768px) {
+    /*Tablets*/
+    nav li {
+        display: inline;
+    }
+
+    .item-contacto {
+        display: block;
+    }
+
+    /*  ULTIMA NOTICIAS EN COLUMNAS
+    -------------------------------
+            ULTIMAS NOTICIAS
+        NOTI 1 | NOTI 2 | NOTI 3
+    -------------------------------
+    */
+}
+
+@media (min-width: 600px) {
+    .informacion {
         display: flex;
-        flex-direction: row;
+        justify-content: space-evenly;
     }
-}
 
-@media (min-width: 321px) /*desde este valor hasta abajo*/ {
-    .card-body {
-        background-color: blue; /*Laptop*/
-    } /*Tablets*/
+    header {
+        height: auto;
+    }
 }
