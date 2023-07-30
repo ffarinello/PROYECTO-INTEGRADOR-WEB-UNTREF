@@ -1,10 +1,58 @@
 @import url("https://fonts.googleapis.com/css2?family=Belanosima&family=Poppins&display=swap");
 
+header {
+    display: flex;
+    background-color: #1f8a70;
+    height: 150px;
+    width: 100vw;
+}
+
+.header__logo {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 10px;
+}
+
+.header__logo img {
+    height: 80px;
+    border-radius: 10%;
+}
+
+header div {
+    display: inline;
+}
+
+header .header__logo span:first-child,
+footer .footer-logo span:first-child {
+    font-family: "Poppins", sans-serif;
+    color: var(--color-texto);
+    text-shadow: var(--color-background) 2px 2px;
+    font-size: 2.5rem;
+    letter-spacing: 3px;
+}
+
+header .header__logo span:last-child,
+footer .footer-logo span:last-child {
+    position: relative;
+    text-shadow: var(--color-texto) 3px 3px;
+    font-size: 2.5rem;
+    font-weight: 500;
+    font-style: italic;
+    margin-left: 10px;
+}
+
 body {
     margin: 0;
     padding: 0;
     background-color: #000;
     padding-bottom: 100px;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 #contact {
@@ -14,7 +62,6 @@ body {
 
 .section-header {
     text-align: center;
-    margin: 0 auto;
     padding: 40px 0;
     color: #fff;
     text-transform: uppercase;
@@ -23,16 +70,17 @@ body {
 
 .contact-wrapper {
     display: flex;
+    justify-content: space-between;
+    align-items: center;
     flex-direction: row;
     max-width: 840px;
     margin: 0 auto;
-    justify-content: space-between;
 }
 
 /* Left contact page */
 .form-horizontal {
-    /*float: left;*/
-    max-width: 400px;
+    /* float: left; */
+    max-width: 350px;
     font-family: "Belanosima", sans-serif;
     font-weight: 400;
 }
@@ -47,14 +95,12 @@ textarea {
 
 .send-button {
     margin-top: 15px;
-    height: 34px;
-    width: 400px;
     overflow: hidden;
-    transition: all 0.2s ease-in-out;
 }
 
+.send-button,
 .alt-send-button {
-    width: 400px;
+    width: 350px;
     height: 34px;
     transition: all 0.2s ease-in-out;
 }
@@ -68,6 +114,15 @@ textarea {
 
 .alt-send-button:hover {
     transform: translate3d(0px, -29px, 0px);
+}
+
+.btn:hover {
+    background-color: #1f8a70;
+}
+
+.btn {
+    background-color: #fc7300;
+    border: none;
 }
 
 /* Begin Right Contact Page */
@@ -174,7 +229,7 @@ textarea {
     color: #000;
 }
 
-#copyright {
+.copyright {
     font: 200 14px "Belanosima", sans-serif;
     color: #555;
     letter-spacing: 1px;
