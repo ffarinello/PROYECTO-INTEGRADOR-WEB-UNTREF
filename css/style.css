@@ -84,15 +84,14 @@ footer .footer-logo span:last-child {
 }
 
 /* navbar */
+.items {
+    line-height: 35px;
+}
 
 .item {
     font-size: 1.2rem;
     padding: 10px;
     text-align: center;
-}
-
-.items {
-    line-height: 35px;
 }
 
 .item-contacto {
@@ -127,11 +126,11 @@ a {
     margin-bottom: 10px;
 }
 
-/* 
-    TO DO: 
-        # CARDS BUTTONS 
-        # MEDIA QUERIES
-*/
+.btn:hover {
+    background-color: var(--color-secundario);
+    transition: all 0.5s;
+    transform: scale(1.1);
+}
 
 /* a:hover {
     background-color: var(--color-secundario);
@@ -140,10 +139,6 @@ a {
 } */
 
 /*  main section */
-
-/* PRUEBA RESPONSIVE */
-
-/* FIN - PRUEBA RESPONSIVE */
 
 main {
     display: grid;
@@ -189,7 +184,7 @@ aside.cards h2#noticias {
     margin-bottom: 30px;
 }
 
-aside.cards .card.card-noticias {
+.card-noticias {
     grid-area: lateral;
 }
 
@@ -284,6 +279,12 @@ dd a:hover {
 
 /* Diseño Responsive */
 
+/* 
+    TO DO: 
+        # CARDS BUTTONS 
+        # MEDIA QUERIES
+*/
+
 @media (min-width: 1200px) {
     main {
         grid-template-columns: auto 35%;
@@ -322,21 +323,30 @@ dd a:hover {
         margin-bottom: 30px;
     }
 
-    aside.cards .card.card-noticias {
+    card-noticias {
         grid-area: lateral;
-    }
-}
-
-@media (min-width: 1024px) {
-    /*notebook*/
-    header {
-        grid-template-columns: auto auto;
-        grid-template-rows: auto;
     }
 
     /* ORDENAR 
     -----------------------------
-    ITEMS      LOGO      CONTACTO
+    ITEMS ITEM ITEM ITEM SEARCHBAR
+    
+    LOGO                 CONTACTO
+    -----------------------------
+    */
+}
+
+@media (min-width: 1024px) {
+    /*notebook*/
+
+    li > i {
+        visibility: hidden;
+    }
+
+    /* ORDENAR 
+    -----------------------------
+                LOGO      
+    ITEMS ITEM ITEM ITEM CONTACTO
     -----------------------------
     */
 }
@@ -351,7 +361,7 @@ dd a:hover {
         display: block;
     }
 
-    /*  ULTIMA NOTICIAS EN COLUMNAS
+    /*  "ULTIMAS NOTICIAS" A COLUMNAS
     -------------------------------
             ULTIMAS NOTICIAS
         NOTI 1 | NOTI 2 | NOTI 3
